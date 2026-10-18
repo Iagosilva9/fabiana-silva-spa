@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabiana Silva | Spa Bem-Estar & Equilíbrio em Embu das Artes</title>
+<meta name="description" content="Massoterapia, spa dos sentidos, ofurô, cuidados faciais e mini face spa infantil em Embu das Artes. Cuidado humanizado para você desacelerar. Agende pelo WhatsApp.">
+<meta property="og:title" content="Fabiana Silva | Spa Bem-Estar & Equilíbrio">
+<meta property="og:description" content="Massoterapia, spa e ofurô com cuidado humanizado em Embu das Artes. Agende seu momento.">
+<meta property="og:image" content="img/ofuro.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2B1A6E">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"DaySpa","name":"Fabiana Silva - Spa Bem-Estar & Equilíbrio","description":"Massoterapia, spa dos sentidos, ofurô e cuidados faciais.","address":{"@type":"PostalAddress","streetAddress":"R. Rezende","addressLocality":"Embu das Artes","addressRegion":"SP","addressCountry":"BR"},"sameAs":["https://www.instagram.com/fs.be_/"]}
+</script>
+<style>
+  :root{
+    --creme:#FAF8FF;
+    --lilas-1:#F0EBFC;
+    --lilas-2:#E1D8F8;
+    --lilas:#9C84E8;
+    --indigo:#2B1A6E;
+    --indigo-2:#1C1049;
+    --ambar:#D98E45;
+    --ambar-esc:#B8722F;
+    --texto:#251B4B;
+    --texto-2:#675F86;
+    --branco:#fff;
+    --raio:20px;
+    --sombra:0 20px 44px -24px rgba(43,26,110,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;font-weight:300;color:var(--texto);background:var(--creme);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12;letter-spacing:.2px}
+  h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+  h2{font-size:clamp(2.1rem,4.2vw,3.1rem)}
+  h3{font-size:1.55rem}
+  em{font-style:italic;color:var(--lilas)}
+  .container{width:min(1160px,100% - 32px);margin-inline:auto}
+  section{padding:96px 0}
+  .tag{display:inline-block;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ambar-esc);font-weight:500;margin-bottom:14px}
+  .centro{text-align:center}
+  .sub{color:var(--texto-2);max-width:640px;margin:16px auto 0}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:500;font-size:.95rem;letter-spacing:.04em;transition:.25s;cursor:pointer;border:1px solid transparent;font-family:inherit}
+  .btn svg{width:18px;height:18px}
+  .btn-pri{background:var(--indigo);color:#fff}
+  .btn-pri:hover{background:var(--indigo-2);transform:translateY(-2px)}
+  .btn-ambar{background:var(--ambar);color:#fff}
+  .btn-ambar:hover{background:var(--ambar-esc);transform:translateY(-2px)}
+  .btn-linha{border-color:var(--indigo);color:var(--indigo)}
+  .btn-linha:hover{background:var(--indigo);color:#fff}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+  header.rolou{border-color:var(--lilas-2)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+  .logo b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.35rem;letter-spacing:.06em;display:block;line-height:1.05}
+  .logo small{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--texto-2)}
+  .menu{display:flex;gap:32px;align-items:center;font-size:.92rem}
+  .menu a:not(.btn){position:relative}
+  .menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--ambar);transition:.25s}
+  .menu a:not(.btn):hover::after{width:100%}
+  .menu .btn{padding:11px 22px}
+  .hamb{display:none;background:none;border:0;cursor:pointer;color:var(--texto)}
+  .hamb svg{width:28px;height:28px}
+
+  .hero{padding:56px 0 90px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-180px;top:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,var(--lilas-2) 0%,transparent 70%);z-index:-1}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .hero p.lead{font-size:1.15rem;color:var(--texto-2);margin:22px 0 34px;max-width:540px}
+  .hero-acoes{display:flex;gap:14px;flex-wrap:wrap}
+  .prova{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap}
+  .prova div b{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--indigo);display:block;line-height:1.1}
+  .prova div span{font-size:.85rem;color:var(--texto-2)}
+  .hero-foto{position:relative;justify-self:center}
+  .arco{width:min(400px,80vw);aspect-ratio:3/4.4;border-radius:220px 220px 24px 24px;overflow:hidden;box-shadow:var(--sombra);border:8px solid var(--branco)}
+  .arco img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+  .selo{position:absolute;left:-40px;bottom:46px;background:var(--branco);padding:14px 20px;border-radius:14px;box-shadow:var(--sombra);display:flex;gap:12px;align-items:center;font-size:.85rem}
+  .selo svg{width:34px;height:34px;color:var(--ambar)}
+  .selo b{display:block;font-weight:500}
+
+  .faixa{background:var(--indigo);color:var(--lilas-2);padding:22px 0;overflow:hidden}
+  .faixa-trilho{display:flex;gap:48px;white-space:nowrap;animation:corre 32s linear infinite;width:max-content}
+  .faixa span{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;display:flex;align-items:center;gap:48px}
+  .faixa span::after{content:"✦";font-style:normal;font-size:.8rem;color:var(--ambar)}
+  @keyframes corre{to{transform:translateX(-50%)}}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:22px;margin-top:52px}
+  .card{background:var(--branco);border-radius:var(--raio);padding:34px 30px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--lilas-1);transition:.3s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:transparent}
+  .icone{width:54px;height:54px;border-radius:50%;background:var(--lilas-1);display:grid;place-items:center;color:var(--indigo)}
+  .icone svg{width:26px;height:26px}
+  .card p{color:var(--texto-2);font-size:.95rem;flex:1}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chips span{font-size:.75rem;background:var(--creme);border:1px solid var(--lilas-2);padding:4px 10px;border-radius:999px;color:var(--texto-2)}
+  .card a.link{font-weight:500;color:var(--ambar-esc);font-size:.92rem;display:inline-flex;gap:8px;align-items:center;margin-top:4px;transition:.2s}
+  .card a.link:hover{gap:12px}
+  .card a.link svg{width:16px;height:16px}
+
+  .galeria{background:var(--lilas-1)}
+  .galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  .galeria-grid figure{border-radius:var(--raio);overflow:hidden;position:relative;aspect-ratio:3/4;box-shadow:var(--sombra)}
+  .galeria-grid figure:nth-child(even){transform:translateY(28px)}
+  .galeria-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .galeria-grid figure:hover img{transform:scale(1.06)}
+  .galeria-grid figcaption{position:absolute;inset:auto 0 0 0;padding:34px 16px 14px;color:#fff;font-size:.88rem;background:linear-gradient(transparent,rgba(28,16,73,.8))}
+  .galeria .nota{text-align:center;margin-top:64px}
+
+  .presente-box{background:linear-gradient(120deg,#3A2491,#2B1A6E 55%,#1C1049);color:#fff;border-radius:28px;padding:54px 56px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+  .presente-box::after{content:"🎁";position:absolute;right:26%;top:-30px;font-size:200px;opacity:.07}
+  .presente-box .tag{color:#F2C894}
+  .presente-box p{opacity:.9;max-width:560px;margin-top:10px}
+  .presente-box em{color:#CDBCFF}
+  .presente-box .btn{background:var(--ambar);color:#fff}
+  .presente-box .btn:hover{background:#fff;color:var(--indigo)}
+
+  .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;counter-reset:p}
+  .passo{padding:38px 30px;border-radius:var(--raio);background:var(--lilas-1);position:relative}
+  .passo::before{counter-increment:p;content:"0" counter(p);font-family:'Cormorant Garamond',serif;font-size:3.4rem;color:var(--ambar);opacity:.7;line-height:1;display:block;margin-bottom:14px}
+  .passo p{color:var(--texto-2);margin-top:8px;font-size:.96rem}
+
+  .quiz{background:var(--indigo);color:var(--creme)}
+  .quiz .sub{color:#C9BEEA}
+  .quiz h2 em{color:#F2C894}
+  .opcoes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:44px auto 0;max-width:880px}
+  .opcao{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:var(--creme);padding:22px 18px;border-radius:16px;cursor:pointer;font-family:inherit;font-size:1rem;display:flex;flex-direction:column;align-items:center;gap:8px;transition:.25s}
+  .opcao span{font-size:1.7rem}
+  .opcao:hover,.opcao.ativo{background:var(--ambar);border-color:var(--ambar)}
+  .resultado{max-width:880px;margin:30px auto 0;background:var(--creme);color:var(--texto);border-radius:20px;padding:34px;display:none;text-align:left}
+  .resultado.mostrar{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;animation:sobe .45s ease}
+  .resultado h3{margin-bottom:6px}
+  .resultado p{color:var(--texto-2)}
+  .resultado .chips{margin-top:12px}
+  @keyframes sobe{from{opacity:0;transform:translateY(14px)}}
+
+  .sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+  .sobre-fotos{position:relative}
+  .sobre-fotos .f1{border-radius:24px;overflow:hidden;box-shadow:var(--sombra);aspect-ratio:4/5}
+  .sobre-fotos .f1 img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .sobre-fotos .f2{position:absolute;right:-34px;bottom:-34px;width:46%;border-radius:18px;overflow:hidden;border:6px solid var(--creme);box-shadow:var(--sombra);aspect-ratio:1}
+  .sobre-fotos .f2 img{width:100%;height:100%;object-fit:cover}
+  .sobre p{color:var(--texto-2);margin-top:18px}
+  blockquote{margin-top:28px;padding-left:22px;border-left:2px solid var(--ambar);font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;color:var(--texto)}
+  .valores{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+  .valores div{display:flex;gap:10px;align-items:center;font-size:.95rem}
+  .valores svg{width:20px;height:20px;color:var(--ambar);flex-shrink:0}
+
+  .depo{background:var(--lilas-1);text-align:center}
+  .depo blockquote{border:0;padding:0;max-width:760px;margin:26px auto 0;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35}
+  .depo cite{display:block;margin-top:20px;font-style:normal;font-size:.9rem;color:var(--texto-2);letter-spacing:.06em}
+
+  .contato{background:var(--branco)}
+  .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .contato-grid>*{min-width:0}
+  .contatos{display:grid;gap:18px;margin-top:34px}
+  .contatos a,.contatos div{display:flex;gap:14px;align-items:center}
+  .contatos .icone{background:var(--lilas-1);flex-shrink:0}
+  .contatos span{overflow-wrap:anywhere}
+  .contato-cta{background:var(--lilas-1);border-radius:28px;padding:44px 40px;text-align:center;box-shadow:var(--sombra)}
+  .contato-cta img{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;border:4px solid #fff}
+  .contato-cta p{color:var(--texto-2);margin:12px 0 26px}
+  .contato-cta .btn{width:100%;justify-content:center;padding:17px}
+  .contato-cta .btn+.btn{margin-top:12px}
+
+  .faq-lista{max-width:780px;margin:48px auto 0}
+  details{border-bottom:1px solid var(--lilas-2);padding:22px 4px}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:'Jost';font-weight:300;font-size:1.6rem;color:var(--ambar);transition:.25s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--texto-2);margin-top:12px;padding-right:30px}
+
+  .insta-box{border:1px solid var(--lilas-2);border-radius:28px;padding:56px;text-align:center;background:var(--branco)}
+  .insta-box .btn{margin-top:26px;overflow-wrap:anywhere}
+
+  footer{background:var(--indigo-2);color:#BDB2E0;padding:60px 0 30px;font-size:.92rem}
+  .rod-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  footer .logo b{color:var(--creme)}
+  footer .logo small{color:#9D92C8}
+  footer h4{color:var(--creme);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:16px}
+  footer li{list-style:none;margin-bottom:8px}
+  footer a:hover{color:#fff}
+  .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:24px;font-size:.8rem;text-align:center;color:#8A7FB5}
+
+  .zap{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:.25s}
+  .zap:hover{transform:scale(1.08)}
+  .zap svg{width:32px;height:32px;color:#fff}
+  .zap::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulsa 2.2s infinite}
+  @keyframes pulsa{to{transform:scale(1.5);opacity:0}}
+
+  .revela{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .revela.visivel{opacity:1;transform:none}
+
+  @media (max-width:920px){
+    section{padding:72px 0}
+    .menu{position:fixed;inset:78px 0 auto 0;background:var(--creme);flex-direction:column;gap:22px;padding:30px 16px 36px;border-bottom:1px solid var(--lilas-2);transform:translateY(-130%);transition:.35s;z-index:-1}
+    .menu.aberto{transform:none}
+    .hamb{display:block}
+    .hero-grid,.sobre-grid,.contato-grid{grid-template-columns:1fr;gap:48px}
+    .hero{padding-top:30px}
+    .hero-foto{order:-1}
+    .arco{width:min(280px,72vw)}
+    .selo{left:-10px;bottom:24px}
+    .passos{grid-template-columns:1fr}
+    .opcoes{grid-template-columns:1fr 1fr}
+    .resultado.mostrar{grid-template-columns:1fr}
+    .presente-box{grid-template-columns:1fr;padding:40px 28px}
+    .sobre-fotos{margin-right:24px}
+    .sobre-fotos .f2{right:-24px}
+    .rod-grid{grid-template-columns:1fr}
+    .contato-cta{padding:34px 22px}
+    .insta-box{padding:40px 22px}
+    .valores{grid-template-columns:1fr}
+    .galeria-grid{grid-template-columns:1fr 1fr}
+    .galeria-grid figure:nth-child(even){transform:none}
+    .galeria .nota{margin-top:40px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.revela{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.03c-.25.69-1.44 1.32-1.98 1.37-.53.05-1.03.24-3.46-.72-2.92-1.15-4.79-4.14-4.93-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.42.74-2.11 1.01-2.4.26-.29.57-.36.76-.36l.55.01c.18.01.41-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48l-.43.5c-.14.14-.29.3-.12.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.45.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.21.55.33.07.12.07.69-.17 1.38Z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-lotus" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M24 38c-5-4-7-10-7-15 0-5 3-10 7-14 4 4 7 9 7 14 0 5-2 11-7 15Z"/><path d="M24 38c-7 0-14-4-17-11 5-2 10-1 13 2"/><path d="M24 38c7 0 14-4 17-11-5-2-10-1-13 2"/><path d="M12 40h24"/></g></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-maos" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12V6a1.5 1.5 0 0 1 3 0v5M10 11V4.5a1.5 1.5 0 0 1 3 0V11M13 11V6a1.5 1.5 0 0 1 3 0v6"/><path d="M16 10a1.5 1.5 0 0 1 3 0v3a8 8 0 0 1-8 8h-1a6 6 0 0 1-5-3l-2-4a1.5 1.5 0 0 1 2.6-1.5L7 14"/></g></symbol>
+  <symbol id="i-rosto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3c-4 0-7 3-7 7.5S8 21 12 21s7-6 7-10.5S16 3 12 3Z"/><path d="M9.5 10h.01M14.5 10h.01M10 15c1.2.8 2.8.8 4 0"/></g></symbol>
+  <symbol id="i-gota" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></symbol>
+  <symbol id="i-vela" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="11" width="8" height="10" rx="1.5"/><path d="M12 3c2 2 2.6 3.6 0 5.6C9.4 6.6 10 5 12 3Z"/><path d="M12 11V9"/></g></symbol>
+  <symbol id="i-coracao" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M12 20s-7-4.5-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.5-9 9-9 9Z"/></symbol>
+  <symbol id="i-presente" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8c-1-3-5-4-5-1.5S10 8 12 8Zm0 0c1-3 5-4 5-1.5S14 8 12 8Z"/></g></symbol>
+  <symbol id="i-familia" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="2.5"/><circle cx="16.5" cy="9" r="2"/><path d="M3 20v-3a5 5 0 0 1 10 0v3M14 20v-2.2a3.8 3.8 0 0 1 7 0V20"/></g></symbol>
+  <symbol id="i-local" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+</svg>
+
+<header id="topo">
+  <div class="container nav">
+    <a href="#" class="logo" aria-label="Fabiana Silva Spa - início">
+      <img src="img/logo.png" alt="Logotipo Fabiana Silva Spa">
+      <span><b>Fabiana Silva</b><small>Bem-estar &amp; Equilíbrio</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#experiencias">Experiências</a>
+      <a href="#espaco">O espaço</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#" class="btn btn-pri" data-zap>Agendar momento</a>
+    </nav>
+    <button class="hamb" id="hamb" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="revela">
+        <span class="tag">Massoterapia · Spa · Ofurô</span>
+        <h1>Um momento para <em>desacelerar</em> e voltar ao seu equilíbrio</h1>
+        <p class="lead">Cuidado humanizado em um espaço pensado para os seus sentidos. Massagens, spa e ofurô em Embu das Artes, para você respirar fundo e cuidar de si.</p>
+        <div class="hero-acoes">
+          <a class="btn btn-pri" href="#" data-zap><svg><use href="#i-zap"/></svg> Agendar pelo WhatsApp</a>
+          <a class="btn btn-linha" href="#experiencias">Ver experiências</a>
+        </div>
+        <div class="prova">
+          <div><b>Atendimento</b><span>individual e acolhedor</span></div>
+          <div><b>Ambiente</b><span>sensorial e reservado</span></div>
+          <div><b>Embu das Artes</b><span>com hora marcada</span></div>
+        </div>
+      </div>
+      <div class="hero-foto revela">
+        <div class="arco"><img src="img/ofuro.jpg" alt="Ofurô à luz de velas no espaço de spa Bem-Estar &amp; Equilíbrio"></div>
+        <div class="selo">
+          <svg><use href="#i-lotus"/></svg>
+          <div><b>SPA dos sentidos</b>Seu momento, sem pressa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <span>Massoterapia</span><span>Massagem relaxante</span><span>SPA dos sentidos</span><span>Ofurô</span><span>Cuidados faciais</span><span>Mini face spa infantil</span><span>Momento em família</span><span>Presente especial</span>
+      <span>Massoterapia</span><span>Massagem relaxante</span><span>SPA dos sentidos</span><span>Ofurô</span><span>Cuidados faciais</span><span>Mini face spa infantil</span><span>Momento em família</span><span>Presente especial</span>
+    </div>
+  </div>
+
+  <!-- EXPERIÊNCIAS -->
+  <section id="experiencias">
+    <div class="container">
+      <div class="centro revela">
+        <span class="tag">Experiências</span>
+        <h2>Cuidado para o corpo, a mente e <em>os sentidos</em></h2>
+        <p class="sub">Escolha a experiência que combina com o seu momento. Na dúvida, é só chamar: eu ajudo você a escolher.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <!-- ESPAÇO -->
+  <section id="espaco" class="galeria">
+    <div class="container">
+      <div class="centro revela">
+        <span class="tag">O espaço</span>
+        <h2>Um refúgio <em>pensado em cada detalhe</em></h2>
+        <p class="sub">Luz suave, aromas, velas e muito carinho. Tudo preparado para você se desconectar da correria.</p>
+      </div>
+      <div class="galeria-grid">
+        <figure class="revela"><img src="img/ofuro.jpg" alt="Ofurô com velas e ambientação sensorial" loading="lazy"><figcaption>Ofurô &amp; SPA dos sentidos</figcaption></figure>
+        <figure class="revela"><img src="img/facial.jpg" alt="Cuidado facial sendo realizado em cliente" loading="lazy" style="object-position:center 30%"><figcaption>Cuidados faciais</figcaption></figure>
+        <figure class="revela"><img src="img/sala.jpg" alt="Maca de massagem em sala com iluminação acolhedora" loading="lazy"><figcaption>Sala de massoterapia</figcaption></figure>
+        <figure class="revela"><img src="img/rosas.jpg" alt="Pétalas de rosas, toalhas e luzes em mesa de recepção" loading="lazy" style="object-position:center 20%"><figcaption>Detalhes que encantam</figcaption></figure>
+      </div>
+      <p class="nota">
+        <a class="btn btn-linha" href="https://www.instagram.com/fs.be_/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg> Ver mais no Instagram</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PRESENTE -->
+  <section style="padding-bottom:0">
+    <div class="container revela">
+      <div class="presente-box">
+        <div>
+          <span class="tag">✦ Para presentear</span>
+          <h2>Presenteie com <em>um momento de cuidado</em></h2>
+          <p>Aniversário, Dia das Mães, agradecimento ou simplesmente para dizer "você importa". Um presente que a pessoa vai sentir. Fale comigo e montamos a experiência ideal.</p>
+        </div>
+        <a class="btn" href="#" data-zap="presente"><svg><use href="#i-zap"/></svg> Quero presentear</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="centro revela">
+        <span class="tag">Como funciona</span>
+        <h2>Simples, do jeito que <em>deve ser</em></h2>
+      </div>
+      <div class="passos">
+        <div class="passo revela"><h3>Chame no WhatsApp</h3><p>Conte o que você procura: relaxar, aliviar tensões, um cuidado facial ou um presente. Eu te oriento na melhor escolha.</p></div>
+        <div class="passo revela"><h3>Escolha seu horário</h3><p>Os atendimentos são individuais e com hora marcada, para que você tenha tempo e privacidade.</p></div>
+        <div class="passo revela"><h3>Relaxe e aproveite</h3><p>Chegue, respire e se entregue. O espaço e o cuidado humanizado fazem o resto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz">
+    <div class="container centro">
+      <div class="revela">
+        <span class="tag">Descubra</span>
+        <h2>Qual momento é <em>ideal para você?</em></h2>
+        <p class="sub">Toque no que você mais precisa agora e veja nossa sugestão.</p>
+      </div>
+      <div class="opcoes" id="opcoes"></div>
+      <div class="resultado" id="resultado" aria-live="polite">
+        <div>
+          <h3 id="res-titulo"></h3>
+          <p id="res-texto"></p>
+          <div class="chips" id="res-chips"></div>
+        </div>
+        <a class="btn btn-pri" id="res-btn" href="#"><svg><use href="#i-zap"/></svg> Agendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-fotos revela">
+        <div class="f1"><img src="img/cliente.jpg" alt="Atendimento acolhedor no spa Bem-Estar &amp; Equilíbrio" loading="lazy"></div>
+        <div class="f2"><img src="img/rosas.jpg" alt="Detalhes de ambientação do espaço" loading="lazy"></div>
+      </div>
+      <div class="revela">
+        <span class="tag">Sobre</span>
+        <h2>Prazer, sou a <em>Fabiana Silva</em></h2>
+        <p>Criei o Bem-Estar &amp; Equilíbrio para ser um lugar onde o cuidado vem em primeiro lugar. Aqui, cada pessoa é recebida com atenção, escuta e carinho.</p>
+        <p>Trabalho com massoterapia, spa e ofurô, sempre com um olhar humanizado, para que você saia daqui mais leve, relaxada e em equilíbrio.</p>
+        <blockquote>“Eu criei esse espaço porque acredito que cuidar de si não deveria ser o último item da lista.”</blockquote>
+        <div class="valores">
+          <div><svg><use href="#i-check"/></svg> Cuidado humanizado</div>
+          <div><svg><use href="#i-check"/></svg> Atendimento individual</div>
+          <div><svg><use href="#i-check"/></svg> Ambiente acolhedor</div>
+          <div><svg><use href="#i-check"/></svg> Experiência para toda a família</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTO -->
+  <section class="depo">
+    <div class="container revela">
+      <span class="tag">Feedback</span>
+      <h2>Quem viveu, <em>recomenda</em></h2>
+      <blockquote>“A melhor recepção, o melhor cuidado. As mãos que sempre abençoam! Obrigado pelo carinho e cuidado!”</blockquote>
+      <cite>Cliente, em comentário no Instagram</cite>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <div class="container contato-grid">
+      <div class="revela">
+        <span class="tag">Contato</span>
+        <h2>Agende o seu <em>momento</em></h2>
+        <p class="sub" style="margin-left:0">É só chamar no WhatsApp. Eu respondo para combinar o melhor dia e horário para você.</p>
+        <div class="contatos">
+          <a href="#" data-zap><span class="icone"><svg><use href="#i-zap"/></svg></span><span><b style="font-weight:500">WhatsApp</b><br>Chamar agora</span></a>
+          <a href="https://www.instagram.com/fs.be_/" target="_blank" rel="noopener"><span class="icone"><svg><use href="#i-insta"/></svg></span><span><b style="font-weight:500">Instagram</b><br>@fs.be_</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=R.+Rezende,+Embu+das+Artes+-+SP" target="_blank" rel="noopener"><span class="icone"><svg><use href="#i-local"/></svg></span><span><b style="font-weight:500">Endereço</b><br>R. Rezende, Embu das Artes - SP</span></a>
+          <div><span class="icone"><svg><use href="#i-relogio"/></svg></span><span><b style="font-weight:500">Atendimento</b><br>Com hora marcada</span></div>
+        </div>
+      </div>
+      <div class="contato-cta revela">
+        <img src="img/logo.png" alt="Logotipo Fabiana Silva Spa">
+        <h3>Seu momento começa aqui</h3>
+        <p>Toque no botão e fale diretamente comigo. Sem formulários, sem burocracia.</p>
+        <a class="btn btn-ambar" href="#" data-zap><svg><use href="#i-zap"/></svg> Agendar pelo WhatsApp</a>
+        <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&query=R.+Rezende,+Embu+das+Artes+-+SP" target="_blank" rel="noopener"><svg><use href="#i-local"/></svg> Ver no mapa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="duvidas">
+    <div class="container">
+      <div class="centro revela">
+        <span class="tag">Dúvidas frequentes</span>
+        <h2>Ficou alguma <em>dúvida?</em></h2>
+      </div>
+      <div class="faq-lista revela">
+        <details><summary>Como faço para agendar?</summary><p>É só tocar em qualquer botão de WhatsApp do site. Eu respondo para combinar o melhor dia e horário para você.</p></details>
+        <details><summary>Qual experiência escolher?</summary><p>Se você busca relaxar e aliviar as tensões do dia a dia, a massoterapia é um ótimo começo. Para um momento ainda mais especial, o SPA dos sentidos com ofurô. Na dúvida, chame no WhatsApp e eu te ajudo.</p></details>
+        <details><summary>Posso presentear alguém?</summary><p>Sim! Um momento de cuidado é um presente muito especial. Fale comigo e montamos a experiência ideal para a pessoa que você quer presentear.</p></details>
+        <details><summary>Crianças podem fazer algum atendimento?</summary><p>Sim, temos o Mini Face SPA infantil, uma experiência leve e divertida, com higienização suave e hidratação delicada.</p></details>
+        <details><summary>Onde fica o espaço?</summary><p>Em Embu das Artes, na R. Rezende. O endereço completo e a melhor forma de chegar são enviados no momento do agendamento.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section style="padding-top:0">
+    <div class="container revela">
+      <div class="insta-box">
+        <span class="tag">Acompanhe</span>
+        <h2>Dicas de autocuidado <em>no Instagram</em></h2>
+        <p class="sub">Conteúdos sobre respiração, rotina, relaxamento e bem-estar, e os bastidores do espaço.</p>
+        <a class="btn btn-linha" href="https://www.instagram.com/fs.be_/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg> Seguir @fs.be_</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container rod-grid">
+    <div>
+      <a href="#" class="logo"><img src="img/logo.png" alt=""><span><b>Fabiana Silva</b><small>Bem-estar &amp; Equilíbrio</small></span></a>
+      <p style="margin-top:18px;max-width:340px">Massoterapia, spa e ofurô com cuidado humanizado. Onde o cuidado é único como você.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul><li><a href="#experiencias">Experiências</a></li><li><a href="#espaco">O espaço</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul><li><a href="#" data-zap>WhatsApp</a></li><li><a href="https://www.instagram.com/fs.be_/" target="_blank" rel="noopener">@fs.be_</a></li><li>R. Rezende, Embu das Artes - SP</li></ul>
+    </div>
+  </div>
+  <div class="container copy">© <span id="ano"></span> Fabiana Silva · Bem-Estar &amp; Equilíbrio</div>
+</footer>
+
+<a class="zap" href="#" data-zap aria-label="Conversar no WhatsApp"><svg><use href="#i-zap"/></svg></a>
+
+<script>
+  // Link direto de atendimento do WhatsApp (o mesmo da bio do Instagram).
+  // Quando tivermos o número, preencha WHATS_NUM (ex.: '5511999999999') para as mensagens já irem escritas.
+  const WHATS_LINK = 'https://wa.me/message/UEMTE3JCORMUO1';
+  const WHATS_NUM = '';
+  const linkZap = msg => WHATS_NUM ? `https://wa.me/${WHATS_NUM}?text=${encodeURIComponent(msg)}` : WHATS_LINK;
+
+  const experiencias = [
+    {nome:'Massoterapia', icone:'i-maos', txt:'Técnicas manuais para aliviar tensões e dores musculares, melhorar a circulação e devolver a sensação de leveza ao corpo.', chips:['Tensão muscular','Estresse','Leveza']},
+    {nome:'Massagem relaxante', icone:'i-lotus', txt:'Um momento só seu para desligar da rotina, com movimentos suaves que acalmam a mente e favorecem um sono melhor.', chips:['Relaxamento','Sono','Bem-estar']},
+    {nome:'SPA dos sentidos', icone:'i-vela', txt:'Uma experiência completa com ambientação, aromas, luz suave e cuidado, pensada para estimular todos os seus sentidos.', chips:['Aromas','Ambiente','Experiência']},
+    {nome:'Ofurô', icone:'i-gota', txt:'Banho de imersão em ambiente reservado, com velas e ambientação especial, para um momento de pausa e acolhimento.', chips:['Imersão','Privacidade','Calma']},
+    {nome:'Cuidados faciais', icone:'i-rosto', txt:'Cuidado com o rosto com higienização e hidratação, deixando a pele macia, revigorada e com aspecto saudável.', chips:['Higienização','Hidratação','Viço']},
+    {nome:'Mini Face SPA infantil', icone:'i-familia', txt:'Uma experiência encantadora para as crianças, com higienização suave, hidratação delicada e muito carinho.', chips:['Crianças','Delicado','Diversão']},
+    {nome:'Momento em família', icone:'i-coracao', txt:'Cuidar de quem a gente ama também é autocuidado. Viva o spa junto com a sua família em um ambiente acolhedor.', chips:['Família','Conexão']},
+    {nome:'Presente especial', icone:'i-presente', txt:'Presenteie alguém querido com um momento de cuidado. Um presente que vai além do objeto e fica na memória.', chips:['Presente','Surpresa']},
+  ];
+
+  document.getElementById('cards').innerHTML = experiencias.map(t => `
+    <article class="card revela">
+      <span class="icone"><svg><use href="#${t.icone}"/></svg></span>
+      <h3>${t.nome}</h3>
+      <p>${t.txt}</p>
+      <div class="chips">${t.chips.map(c=>`<span>${c}</span>`).join('')}</div>
+      <a class="link" target="_blank" rel="noopener" data-zap="Olá, Fabiana! Tenho interesse em ${t.nome}. Pode me passar mais informações?" href="#">Quero saber mais <svg><use href="#i-seta"/></svg></a>
+    </article>`).join('');
+
+  const objetivos = [
+    {emoji:'😮‍💨', label:'Aliviar o estresse', titulo:'Para desacelerar de verdade', txt:'A massagem relaxante acalma o corpo e a mente, ajudando a soltar o peso da rotina e a dormir melhor.', sug:['Massagem relaxante','Massoterapia']},
+    {emoji:'💪', label:'Dor e tensão', titulo:'Para aliviar tensões e dores', txt:'A massoterapia trabalha as áreas mais tensionadas do corpo e traz mais leveza e mobilidade no dia a dia.', sug:['Massoterapia']},
+    {emoji:'✨', label:'Cuidar do rosto', titulo:'Para uma pele revigorada', txt:'Um cuidado facial com higienização e hidratação deixa a pele macia e com mais viço.', sug:['Cuidados faciais']},
+    {emoji:'🕯️', label:'Algo especial', titulo:'Para viver uma experiência', txt:'O SPA dos sentidos com ofurô reúne ambientação, aromas e acolhimento em um momento inesquecível.', sug:['SPA dos sentidos','Ofurô']},
+    {emoji:'🎁', label:'Presentear alguém', titulo:'Para dar de presente', txt:'Um momento de cuidado é um presente que emociona. Montamos a experiência ideal para a pessoa especial.', sug:['Presente especial']},
+    {emoji:'👨‍👩‍👧', label:'Em família', titulo:'Para cuidar em família', txt:'Experiências para vocês viverem juntos, incluindo o Mini Face SPA infantil para os pequenos.', sug:['Momento em família','Mini Face SPA infantil']},
+  ];
+  const opcoes = document.getElementById('opcoes');
+  opcoes.innerHTML = objetivos.map((o,i)=>`<button class="opcao" data-i="${i}"><span>${o.emoji}</span>${o.label}</button>`).join('');
+  opcoes.addEventListener('click', e => {
+    const b = e.target.closest('.opcao'); if(!b) return;
+    opcoes.querySelectorAll('.opcao').forEach(x=>x.classList.remove('ativo')); b.classList.add('ativo');
+    const o = objetivos[b.dataset.i];
+    document.getElementById('res-titulo').textContent = o.titulo;
+    document.getElementById('res-texto').textContent = o.txt;
+    document.getElementById('res-chips').innerHTML = o.sug.map(s=>`<span>${s}</span>`).join('');
+    const r = document.getElementById('res-btn');
+    r.href = linkZap(`Olá, Fabiana! Fiz o teste no site e meu momento é: ${o.label}. Gostaria de agendar.`);
+    r.target = '_blank'; r.rel = 'noopener';
+    document.getElementById('resultado').classList.add('mostrar');
+  });
+
+  document.querySelectorAll('[data-zap]').forEach(a => {
+    const msg = a.dataset.zap && a.dataset.zap !== 'presente' ? a.dataset.zap
+      : a.dataset.zap === 'presente' ? 'Olá, Fabiana! Quero presentear alguém com um momento de cuidado.'
+      : 'Olá, Fabiana! Vim pelo site e gostaria de agendar meu momento.';
+    a.href = linkZap(msg); a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  const menu = document.getElementById('menu');
+  document.getElementById('hamb').addEventListener('click', () => menu.classList.toggle('aberto'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('aberto')));
+
+  window.addEventListener('scroll', () => document.getElementById('topo').classList.toggle('rolou', scrollY > 10));
+  const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visivel'); obs.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.revela').forEach(el => obs.observe(el));
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
